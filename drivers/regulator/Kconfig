@@ -604,6 +604,13 @@ config REGULATOR_MAX77650
 	  Semiconductor. This device has a SIMO with three independent
 	  power rails and an LDO.
 
+config REGULATOR_MAX77720
+	tristate "ADI max77720 regulator"
+	depends on I2C
+	select REGMAP_I2C
+	help
+	  This driver supports max77720 voltage regulator chip.
+
 config REGULATOR_MAX77857
 	tristate "ADI MAX77857/MAX77831 regulator support"
 	depends on I2C
